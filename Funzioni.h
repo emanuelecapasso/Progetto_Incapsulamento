@@ -4,8 +4,8 @@
 using namespace std;  
 
 
-// Struct dell'header IP contenente tutti i suoi campi
-struct IpHeader {
+//Struct dell'header IP contenente tutti i suoi campi
+struct IpHeader{
   string versione;
   string HLEN;
   string TOF;
