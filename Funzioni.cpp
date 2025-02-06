@@ -1,3 +1,6 @@
+//Emanuele Capasso 4BI
+
+
 #include "Funzioni.h"
 #include <iostream>
 #include <bitset>
