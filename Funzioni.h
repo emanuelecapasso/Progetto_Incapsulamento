@@ -1,3 +1,6 @@
+//Emanuele Capasso 4BI
+
+
 #ifndef FUNZIONI_H
 #define FUNZIONI_H
 #include <string>  
