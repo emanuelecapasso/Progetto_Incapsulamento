@@ -6,7 +6,7 @@ using namespace std;
 
 //Struct dell'header IP contenente tutti i suoi campi
 struct IpHeader{
-  string versione;
+  string version;
   string HLEN;
   string TOF;
   string totalLength;
