@@ -38,7 +38,7 @@ void scriviSuFile(string frame){
 }
 
 
-string convertiInBinario(string testo) {
+string convertiInBinario(string testo){
   string numeroBinario = "";
   for(char c : testo){                                         //Scorro tutto il messaggio finchè riesco a leggerlo
     numeroBinario += bitset<8>(c).to_string() + "";            // Sfrutto bitset per convertire automaticamente un carattere in binario
@@ -47,7 +47,7 @@ string convertiInBinario(string testo) {
 }
 
 
-void creaDatagram(IpHeader &header) {
+void creaDatagram(IpHeader &header){
   header.version = "0100";                           //Versione del protocollo IP
   header.HLEN = "0101";                              //Lunghezza dell'header in parole
   header.TOF = "00000000";                           //Tutti i bit del type of service sono a 0
