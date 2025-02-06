@@ -16,6 +16,8 @@ struct IpHeader{
   string TTL;
   string protocol;
   string headerChecksum;
+  string sourceAddress;
+  string destinationAddress;
 };
 
 
