@@ -1,10 +1,11 @@
 /*
 
-PROGETTO INCAPSULAMENTO
-
-Sistemi e reti
-Emanuele Capasso 4BI
+        PROGETTO INCAPSULAMENTO
+        
+        Sistemi e reti
+        Emanuele Capasso
 */
+
 
 #include <bitset>
 #include <fstream>
@@ -14,16 +15,22 @@ using namespace std;
 
 
 int main(){
-	string messaggio = leggiDaFile();                                  //Leggo il messaggio da file
-	cout<<"Messaggio letto: "<<messaggio<<endl;
-	messaggio = convertiInBinario(messaggio);                          //Converto il messaggio letto in binario
-	cout<<"Messaggio letto tradotto in binario: "<<messaggio<<endl;
+    string messaggio = leggiDaFile();                                                       //Leggo il messaggio da file
+    cout<<"Messaggio letto: "<<messaggio<<endl;
 
-	IpHeader header;
-	creaDatagram(header);
+    messaggio = convertiInBinario(messaggio);                                               //Converto il messaggio letto in binario
+    cout<<"Messaggio letto tradotto in binario: "<<messaggio<<endl;
 
-	scriviSuFile(messaggio);                                           //Scrivo il messaggio finale, in binario, sul file
-	cout<<"Messaggio scritto correttamente sul file"<<endl;
+    IpHeader header;
+    creaDatagram(header);                                                                   //Crea l'header IP
 
-	return 0;
+    ethernetHeader frameHeader;
+    creaFrame(frameHeader, header);                                                         //Creazione del frame Ethernet
+
+    string frameBinario = frameInBinario(frameHeader);
+    scriviSuFile(frameBinario);                                                             //Scrivo il messaggio finale sul file Frame.txt
+
+    cout<<"Frame scritto correttamente sul file Frame.txt"<<endl;
+
+    return 0;
 }
