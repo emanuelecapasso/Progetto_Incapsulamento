@@ -1,4 +1,4 @@
-#La funzione legge dal file Frame.txt e stampa a schermo il messaggio letto
+#La funzione legge dal file Frame.txt
 def leggiDaFile():
     with open("Frame.txt","r") as f:
         print("Messaggio letto correttamente")
